@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Indicators</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Customizable Trading Indicators</h1>
+    </header>
+
+    <main>
+        <section id="chart-container">
+            <canvas id="stockChart"></canvas>
+        </section>
+
+        <section id="indicator-controls">
+            <h2>Select Indicators</h2>
+            <label for="indicator">Choose an Indicator:</label>
+            <select id="indicator">
+                <option value="sma">Simple Moving Average (SMA)</option>
+                <option value="ema">Exponential Moving Average (EMA)</option>
+                <option value="bollinger">Bollinger Bands</option>
+            </select>
+            <button id="applyIndicator">Apply</button>
+            <button id="removeIndicator">Remove</button>
+        </section>
+
+        <section id="strategy-controls">
+            <h2>Trading Strategy</h2>
+            <p>Example: "Buy when price crosses 50-day moving average"</p>
+            <button id="applyStrategy">Apply Strategy</button>
+        </section>
+
+        <section id="log-output">
+            <h2>Strategy Output</h2>
+            <ul id="outputLog"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
